@@ -1,34 +1,34 @@
 name: jq
 
 on:
-    pull_request:
-        branches:
-            - 001-init
-        paths:
-            - .github/workflows/001-init.yaml
+  push:
+    branches:
+      - 001-init
+    paths:
+      - .github/workflows/001-init.yaml
 
 jobs:
   py-run-unit-tests:
     runs-on: ubuntu-latest
 
     steps:
-        - name: Checkout code
-          uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-        - name: unit test
-          working-directory: python
-          run: |
-            python test_gilded_rose.py
+    - name: unit test
+      working-directory: python
+      run: |
+        python test_gilded_rose.py
 
   py-run-TextTest-fixture:
     runs-on: ubuntu-latest
 
     steps:
-        - name: Checkout code
-          uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-        - name: TextTest fixture
-          working-directory: python
-          run: |
-            python texttest_fixture.py 10
+    - name: TextTest fixture
+      working-directory: python
+      run: |
+        python texttest_fixture.py 10
     
