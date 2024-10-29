@@ -6,6 +6,7 @@ on:
       - 001-init
     paths:
       - .github/workflows/001-init.yaml
+      - python/test_gilded_rose.py
 
 jobs:
   py-run-unit-tests:
