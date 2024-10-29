@@ -1,0 +1,20 @@
+name: 001 run TextTests 
+
+on:
+  push:
+    branches:
+      - 001-init
+    paths:
+      - .github/workflows/001-init-texttests.yaml
+
+jobs:
+  py-texttests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: run Text Tests
+      run: |
+        start_texttest.sh
