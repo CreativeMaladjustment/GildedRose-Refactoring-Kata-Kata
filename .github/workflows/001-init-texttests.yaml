@@ -17,4 +17,4 @@ jobs:
 
     - name: run Text Tests
       run: |
-        start_texttest.sh
+        . ./start_texttest.sh
