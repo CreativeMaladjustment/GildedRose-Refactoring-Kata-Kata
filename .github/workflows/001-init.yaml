@@ -1,4 +1,4 @@
-name: jq
+name: 001-init run tests from python readme
 
 on:
   push:
